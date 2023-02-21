@@ -54,7 +54,7 @@ public class Principal{
             System.out.println("Porfavor elige una opcion:");
             opcion = Integer.parseInt(teclado.nextLine());
 
-            Calculator calc = new Calculator();
+            calc = Calculator.getInstance();
 
             switch(opcion){
                 case 1:
