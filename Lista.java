@@ -12,25 +12,42 @@ public abstract class Lista<T> implements IList<T>{
 
 	}
 
-	// Metodo que inserta un valor al inicio de la lista
+	/**
+	 *  Metodo que inserta un valor al inicio de la lista
+	 *  @post el elemento es añadido al inicio de la lista
+	 */ 
 	@Override
 	public abstract void InsertAtStart(T value);
 
-	// Metodo que elimina el elemento al inicio de la lista
+	/**
+	 * Metodo que elimina el elemento al inicio de la lista
+	 * @pre la lista no esta vacia
+	 * @post remueve el primer valor de la lista
+	 */
 	@Override
 	public abstract T DeleteAtStart();
 
-	// Metodo que obtiene un valor en una posicion especifica
+	/**
+	 * Metodo que obtiene el elemento al final de la lista
+	 * @pre la lista tiene al menos un elemento
+	 * @post retorna el ultimo valor encontrado en la lista
+	 */ 
 	@Override
 	public abstract T Get(int index);
 
-	// Metodo que verifica si la lista esta vacia
+	/**
+	 * Metodo que verifica si la lista esta vacia
+	 * @post devuelve true si la lista no contiene elementos
+	 */ 
     @Override
 	public boolean IsEmpty() {
 		return Count() == 0;	
 	}
 
-	// Metodo que cuenta la cantidad de elementos que tiene una lista 
+	/**
+	 * Metodo que cuenta la cantidad de elementos que tiene una lista 
+	 * @post devuelve la cantidad de elementos en la lista
+	 */ 
 	@Override
 	public abstract int Count();
 	    
