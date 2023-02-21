@@ -12,21 +12,38 @@ public abstract class Stack<T> implements IStack<T>{
 
     }
 
-    // Metodo que devuelve la cantidad de elementos de un stack
+    /**
+     * Metodo que devuelve la cantidad de elementos de un stack
+     * @post devuelve la cantidad de elementos en la pila
+     */
     public abstract int count();
 
-    // Metodo que verifica si el stack esta vacio
+    /**
+     * Metodo que verifica si el stack esta vacio
+     * @post Devuelve un valor true si la pila esta vacia
+     */    
     public boolean isEmpty(){
         return count() == 0;
     }
 
-    // Metodo que introduce un elemento al stack
+    /**
+     * Metodo que introduce un elemento al stack
+     * @post se introduce un elemento al stack
+     */
     public abstract void push(T value);
 
-    // Metodo que extrate un elemento del stack
+    /**
+     * Metodo que extrae un elemento del stack
+     * @pre la pila no esta vacia
+     * @post el ultimo elemento incorporado es extraido
+     */
     public abstract T pull();
 
-    // Metodo que devuelve el primer elemento del stack
+    /** 
+     * Metodo que muestra el ultimo elemento del stack
+     * @pre la pila no esta vacia
+     * @post el ultimo elemento incorporado es mostrado
+     */ 
     public abstract T peek();
 
 }
